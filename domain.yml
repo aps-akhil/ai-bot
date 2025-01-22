@@ -1,0 +1,21 @@
+version: "3.1"
+
+actions:
+  - action_trigger_pipeline
+  - action_check_pipeline_status
+
+intents:
+  - greet
+  - build_deploy
+  - bye
+  - pipeline_status
+
+responses:
+  utter_welcome:
+  - text: Hi there! What can I help you with today?
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_bye:
+    - text: "Have a nice day !"    
+  # utter_build_deploy:
+  #   - text: "Pipeline triggered successfully! Waiting for the run to complete..."

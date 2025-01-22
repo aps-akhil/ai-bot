@@ -1,0 +1,27 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hello
+      - Hey
+  - intent: build_deploy
+    examples: |
+      - Run the build and deploy pipeline
+      - Build and Deploy
+      - Can you build and deploy pipeline?
+      - Deploy demo application
+
+  - intent: pipeline_status
+    examples: |
+      - What is the status of pipeline
+      - Pipeline status
+      - Does the pipeline run completes ? 
+      - deployment status
+      - status of deployment
+  - intent: bye
+    examples: |
+      - Bye
+      - Goodbye
+      - See you   

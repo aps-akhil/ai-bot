@@ -1,0 +1,12 @@
+
+version: "3.1"
+stories:
+  - story: Trigger Azure DevOps pipeline to build and deploy
+    steps:
+      - intent: build_deploy
+      - action: utter_build_deploy      
+      - action: action_trigger_pipeline
+  - story: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet      

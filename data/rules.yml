@@ -1,0 +1,28 @@
+version: "3.1"
+rules:
+
+  - rule: welcome user
+    conversation_start: true  # this rule only applies at the beginning of a conversation
+    steps:
+      - intent: greet
+      - action: utter_welcome
+
+  - rule: Respond to build_deploy intent
+    steps:
+      - intent: build_deploy
+      # - action: utter_build_deploy      
+      - action: action_trigger_pipeline
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Get the status of pipeline
+    steps:
+      - intent: pipeline_status
+      - action: action_check_pipeline_status
+
+  - rule: Good bye the user
+    steps:
+      - intent: bye
+      - action: utter_bye     
